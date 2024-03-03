@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-size: 24px;
+    background-color: #2b3137;
+    color: #ffffff;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    margin: 500px;
+    margin-top: 300px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+#nInput{
+    width: 200px;
+}
+
