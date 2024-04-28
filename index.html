@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
     <title>Count Game</title>
 </head>
 <body>
@@ -20,11 +22,13 @@
                     <input type="submit" id="btnSubmit" value="Submit guess">   
                 </form>
             </div>
-            <p id="guesses" data-clear="true"></p>
-            <p id="previousGuesses"></p>
-            <p id="result" data-clear="true"></p>
-            <p id="answerStatus" data-clear="true"></p>
-            <div id="gameOver"></div> 
+            <div id="gameInfo">
+                <p id="guesses" data-clear="true"></p>
+                <p id="previousGuesses" data-clear="true"></p>
+                <p id="result" data-clear="true"></p>
+                <p id="answerStatus" data-clear="true"></p>
+                <p id="resetBtn"></p> 
+            </div>
         </div>
     </div>
     <script src="game.js"></script>
