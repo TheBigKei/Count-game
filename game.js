@@ -2,8 +2,6 @@ var counter = createCounter();
 
 var storedRndNumber = generateRndNumber();
 
-
-
 var answerStatus = ['Congratulations! You got it right!','Last guess was too high!','Last guess was too low!'];
 
 function generateRndNumber(){
@@ -26,18 +24,23 @@ document.getElementById("formInput").addEventListener("submit", function(event) 
     if (inputNumber===''){ 
         inputNumber = 0; 
     }
+
     console.log(storedRndNumber())
+
     inputNumber=Number(inputNumber);
 
     if(inputNumber>storedRndNumber()){ 
         print(inputNumber,answerStatus[1]); 
     } 
+
     else if(inputNumber<storedRndNumber()){ 
         print(inputNumber,answerStatus[2]); 
-    } 
+    }
+
     else if(inputNumber===storedRndNumber()){ 
         print(inputNumber,answerStatus[0]);
     } 
+
     else { 
         throw console.error(); 
     } 
@@ -99,15 +102,16 @@ function endGame(result){
     submitBtn.disabled = true; 
 
     if(result === false){ 
-        printGameOver = document.getElementById('answerStatus').textContent += '\n You lose. Game over'
+        document.getElementById('answerStatus').textContent += '\n You lose. Game over'
     }
     else{
-        printGameOver = document.getElementById('answerStatus').textContent += '\n You win. Game over'
+        document.getElementById('answerStatus').textContent += '\n You win. Game over'
     }
 }
 
 function dataReset(){
     let dataClear = document.querySelectorAll('[data-clear="true"]');
+
     dataClear.forEach(dataClear => {
         dataClear.innerHTML='';
     });
@@ -115,6 +119,6 @@ function dataReset(){
  
 function resetGame(){ 
     counter = createCounter(); 
-    submitBtn.disabled = false;
     storedRndNumber = generateRndNumber();
+    submitBtn.disabled = false;
 }
